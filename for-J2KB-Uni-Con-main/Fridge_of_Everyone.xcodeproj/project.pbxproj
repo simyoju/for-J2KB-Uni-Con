@@ -7,22 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B46CF3D426498E3900949B79 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B46CF3D326498E3900949B79 /* Launch Screen.storyboard */; };
 		DF3C83312646C4930089FF36 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3C83302646C4930089FF36 /* AppDelegate.swift */; };
 		DF3C83332646C4930089FF36 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3C83322646C4930089FF36 /* SceneDelegate.swift */; };
 		DF3C83352646C4930089FF36 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3C83342646C4930089FF36 /* ViewController.swift */; };
 		DF3C83382646C4930089FF36 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF3C83362646C4930089FF36 /* Main.storyboard */; };
 		DF3C833A2646C4960089FF36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF3C83392646C4960089FF36 /* Assets.xcassets */; };
-		DF3C833D2646C4960089FF36 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF3C833B2646C4960089FF36 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B46CF3D326498E3900949B79 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		DF3C832D2646C4930089FF36 /* Fridge_of_Everyone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fridge_of_Everyone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF3C83302646C4930089FF36 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DF3C83322646C4930089FF36 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		DF3C83342646C4930089FF36 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DF3C83372646C4930089FF36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DF3C83392646C4960089FF36 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		DF3C833C2646C4960089FF36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DF3C833E2646C4960089FF36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -61,8 +61,8 @@
 				DF3C83342646C4930089FF36 /* ViewController.swift */,
 				DF3C83362646C4930089FF36 /* Main.storyboard */,
 				DF3C83392646C4960089FF36 /* Assets.xcassets */,
-				DF3C833B2646C4960089FF36 /* LaunchScreen.storyboard */,
 				DF3C833E2646C4960089FF36 /* Info.plist */,
+				B46CF3D326498E3900949B79 /* Launch Screen.storyboard */,
 			);
 			path = Fridge_of_Everyone;
 			sourceTree = "<group>";
@@ -124,7 +124,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DF3C833D2646C4960089FF36 /* LaunchScreen.storyboard in Resources */,
+				B46CF3D426498E3900949B79 /* Launch Screen.storyboard in Resources */,
 				DF3C833A2646C4960089FF36 /* Assets.xcassets in Resources */,
 				DF3C83382646C4930089FF36 /* Main.storyboard in Resources */,
 			);
@@ -152,14 +152,6 @@
 				DF3C83372646C4930089FF36 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		DF3C833B2646C4960089FF36 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DF3C833C2646C4960089FF36 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
