@@ -1,0 +1,81 @@
+//
+//  RegisterViewController.swift
+//  FridgeLoginRegister
+//
+//  Created by 황서진 on 2021/07/28.
+//
+
+import UIKit
+import Alamofire
+import SwiftyJSON
+
+class RegisterViewController: UIViewController {
+
+    @IBOutlet var idTextField: UITextField!
+    @IBOutlet var emailTextField: UITextField!
+    @IBOutlet var pwTextField: UITextField!
+    @IBOutlet var emailSentBtn: UIButton!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        //email인증버튼
+        emailSentBtn.layer.cornerRadius = 10
+
+        // Do any additional setup after loading the view.
+    }
+    
+
+    @IBAction func finishBtnClicked(_ sender: UIButton) {
+        
+        var email = emailTextField.text ?? ""
+        var pw = pwTextField.text ?? ""
+        var nickName = idTextField.text ?? ""
+        
+//        if email.count == 0 || pw.count == 0 || nickName.count == 0 {
+//            var alert = UIAlertController(title: "다시 입력해주세요", message: "빈 칸이 있습니다", preferredStyle: .alert)
+//            alert.addAction(UIAlertAction(title: "확인", style: .default, handler: nil))
+//            self.present(alert, animated: true, completion: nil)
+//            return
+//        }
+            
+        var parameters = [
+            "email" : email,
+            "password" : pw,
+            "nickname" : nickName
+        ]
+            
+        AF.request("http://27.35.18.238/api/users", method: .post, parameters: parameters, encoding: JSONEncoding.default).responseJSON { (response) in
+            debugPrint(response)
+            if var value = response.value {
+                var json = JSON(value)
+                
+                // 중간에 성공적으로 회원가입이 완료되었습니다! 뭐 이런 것도 뜨나요..
+                
+                self.navigationController?.popViewController(animated: true)
+            }
+        }
+    
+    }
+    
+    @IBAction func backBtnClicked(_ sender: UIButton) {
+        let stopRegisterAlert = UIAlertController(title: "경고", message: "회원가입이 완료되지 않았습니다.\n회원가입을 중단하시겠습니까?", preferredStyle: UIAlertController.Style.alert)
+        let stopAction = UIAlertAction(title: "네, 중단합니다.", style: UIAlertAction.Style.default, handler: {ACTION in self.navigationController?.popViewController(animated: true)})
+        let continueAction = UIAlertAction(title: "아니요.", style: UIAlertAction.Style.default, handler: nil)
+        
+        stopRegisterAlert.addAction(stopAction)
+        stopRegisterAlert.addAction(continueAction)
+        present(stopRegisterAlert, animated: true, completion: nil)
+    }
+    
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+    }
+    */
+
+}
